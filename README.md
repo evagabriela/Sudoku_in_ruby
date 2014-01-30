@@ -1,9 +1,8 @@
 # Sudoku Solver #
  Sudoku Solver is a small project created just for fun, to practice more Ruby and testing.
 
-## Running the program ##
 
-Coming soon... 
+
 
 <!-- Then:
 
@@ -46,6 +45,18 @@ The program prints the original Sudoku and the solved one to the console, someth
       | 2 8 7 | 4 1 9 | 6 3 5
       | 3 4 5 | 2 8 6 | 1 7 9  
        
- This repo is still work in progress ...
+## To get started: ##
+
+1) Clone this git repo to your computer
+
+2) bundle install
+
+3) to run the tests type: rspec spec
+
+4) To run the program:
+  cd Sudoku
+  ruby user_interface.rb
+
+Enjoy!
 
 
