@@ -4,9 +4,6 @@ class Grid
     @string_input = string_input
     @array_of_rows = []
     create_rows
-    validate(string_input)
-    # get_row
-    # get_column
   end
 
   # create rows of 9 spaces 
