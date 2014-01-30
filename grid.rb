@@ -74,6 +74,9 @@ class Grid
     end
   end
 
+  def is_solved?
+    return true ? self.sudoku_solve! 
+  end
 
   private
   def validate(string_input)

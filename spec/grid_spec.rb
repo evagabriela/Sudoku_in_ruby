@@ -1,23 +1,41 @@
 require 'spec_helper.rb'
 
 describe Grid do 
-  describe "#new" do
-    it "can be initialized with a string of integers" do
+  let(:grid) { Grid.new('1'*9 + '2'*9 + '3'*9 + '4'*9 +
+                '5'*9 + '6'*9 + '7'*9 + '8'*9 + '9'*9 ) }
+
+  context "#initialize" do 
+
+    it "rejects bad input" do
+      expect {
+        Grid.new('I dont know what I am typing here instead of the correct input')
+      }.to raise_error
     end
 
-    it "accepts correct input" do
+    it "accepts the correct input" do 
       expect(Grid.new('0'*81)).to be_a Grid
     end
 
-    it " raise an error for an incorrect input" do
-      expect { Grid.new('this is not a grid') }.to raise_error
-    end
-
-    it "generates row of objects" do
-    end
-
-    it "generates column of objects "do
+    it "generates 9 Rows, 9 Columns, and 9 Boxes" do
+      Grid.new ('0'*81).should_receive(:create_rows).exactly(9).time
     end
   end 
+
+  describe "#is_solved?" do
+    context "with no 0's" do      
+      let(:grid) { Grid.new('1'*81) } 
+      it "returns true" do 
+        grid.is_solved?.should be_true
+      end
+    end
+
+
+    context "with some 0's" do 
+      let(:grid) { Grid.new('1'*80+'0') } 
+      it "returns false" do 
+        grid.is_solved?.should be_false
+      end
+    end
+  end
 
 end

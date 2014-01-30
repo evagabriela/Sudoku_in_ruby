@@ -1,14 +1,6 @@
 # Sudoku Solver #
  Sudoku Solver is a small project created just for fun, to practice more Ruby and testing.
 
-
-
-
-<!-- Then:
-
-    cd sudoku-solver
-    ruby sudoku.rb -->
-
 ## Input and Output ##
 
 The program prints the original Sudoku and the solved one to the console, something like this:
