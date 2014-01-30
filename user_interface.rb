@@ -9,12 +9,12 @@ puts " Please enter the 81 numbers characters found in the original Sudoku table
 
 puts "Let's fill out a sudoku table with your original inputs"
   # Here goes the code for printing the board without solving it 
-  # p grid.board
+  p grid.board
 
 puts "Are you ready to see how I help you to solve your Sudoku game?, enter "Y" for yes and "N" for no "
   user_decision = gets.chomp
   if user_decision == "Y"
-    # here goes the code to sudoku.solve!
+    grid.solve!
   elsif user_decision == "N"
     puts "Goodbye!"
   else 
